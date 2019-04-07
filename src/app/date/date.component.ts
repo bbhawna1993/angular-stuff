@@ -15,6 +15,9 @@ export class DateComponent implements OnInit {
     this.dateMessage=currentDate.toLocaleDateString+" "+currentDate.toLocaleTimeString();
    },1000)
 }
+ addNumber(a: number,b: number)
+ {return a+b;}
+ 
 
   ngOnInit() {
   }
