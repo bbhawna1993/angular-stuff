@@ -6,9 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./date.component.css']
 })
 export class DateComponent implements OnInit {
- 
-  message: string="hello from date component"
-  constructor() { }
+
+  dateMessage: string;
+  constructor() {
+   setInterval(()=>
+   {
+    let currentDate=new Date();
+    this.dateMessage=currentDate.toLocaleDateString+" "+currentDate.toLocaleTimeString();
+   },1000)
+}
 
   ngOnInit() {
   }
